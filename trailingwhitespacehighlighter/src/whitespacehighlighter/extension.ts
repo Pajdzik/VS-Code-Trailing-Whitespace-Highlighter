@@ -26,16 +26,16 @@ export namespace WhitespaceHighlighter {
                 return;
             }
 
-            var text = this.activeEditor.document.getText();
+            let text = this.activeEditor.document.getText();
 
-            var whiteSpaceDecoration: vscode.DecorationOptions[] = [];
-            var match;
+            let whiteSpaceDecoration: vscode.DecorationOptions[] = [];
+            let match;
 
             while (match = Extension.trailingWhitespaceRegex.exec(text)) {
-                var startPos = this.activeEditor.document.positionAt(match.index);
-                var endPos = this.activeEditor.document.positionAt(match.index + match[0].length);
+                let startPos = this.activeEditor.document.positionAt(match.index);
+                let endPos = this.activeEditor.document.positionAt(match.index + match[0].length);
 
-                var decoration = { range: new vscode.Range(startPos, endPos), hoverMessage: 'Number **' + match[0] + '**' };
+                let decoration = { range: new vscode.Range(startPos, endPos), hoverMessage: 'Number **' + match[0] + '**' };
                 whiteSpaceDecoration.push(decoration);
             }
 
