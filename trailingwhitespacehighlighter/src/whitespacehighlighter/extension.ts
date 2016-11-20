@@ -2,9 +2,9 @@ import * as vscode from 'vscode';
 
 export namespace WhitespaceHighlighter {
     export class Extension {
-        static extensionName = "Trailing Whitespace Highlighter"
-        static trailingWhitespaceRegex = /\s+(\n|$)/g  ///\s+[\r\n]/g;
-        static decorationType = vscode.window.createTextEditorDecorationType({
+        public static readonly extensionName = "Trailing Whitespace Highlighter"
+        private static readonly trailingWhitespaceRegex = /\s+(\n|$)/g  ///\s+[\r\n]/g;
+        private static readonly decorationType = vscode.window.createTextEditorDecorationType({
             backgroundColor: 'rgba(255, 66, 178, 0.3)'
         });
 
@@ -16,6 +16,7 @@ export namespace WhitespaceHighlighter {
             this.activeEditor = activeEditor;
             this.context = context;
 
+            this.subscribe();
             if (this.activeEditor) {
                 this.triggerUpdateDecorations();
             }
