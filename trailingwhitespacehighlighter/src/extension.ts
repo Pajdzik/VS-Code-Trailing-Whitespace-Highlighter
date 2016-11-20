@@ -58,7 +58,7 @@ export function activate(context: vscode.ExtensionContext) {
             return;
         }
 
-        var regEx = /[ \t]+[\r\n]/g;
+        var regEx = /\s+[\r\n]/g;
 
         var text = activeEditor.document.getText();
 
