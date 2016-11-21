@@ -3,7 +3,7 @@
     "displayName": "Trailing Whitespace Highlighter",
     "description": "",
     "version": "0.0.1",
-    "publisher": "Pajdziu",
+    "publisher": "pajdziu",
     "engines": {
         "vscode": "^1.5.0"
     },
@@ -14,14 +14,6 @@
         "*"
     ],
     "main": "./out/src/extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "trailingwhitespacehighlighter.toggle",
-                "title": "Toggle trailing whitespace characters highlighting"
-            }
-        ]
-    },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
         "compile": "tsc -watch -p ./",
@@ -33,16 +25,5 @@
         "mocha": "^2.3.3",
         "@types/node": "^6.0.40",
         "@types/mocha": "^2.2.32"
-    },
-    "configuration": {
-        "type": "object",
-        "title": "Whitespace highligther configuration",
-        "properties": {
-            "whitespacehighlighter.enabled": {
-                "type": "boolean",
-                "default": true,
-                "description": "Whether to highlight whitespace characters."
-            }
-        }
     }
 }
