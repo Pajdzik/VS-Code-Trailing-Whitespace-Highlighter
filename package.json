@@ -2,7 +2,7 @@
     "name": "trailingwhitespacehighlighter",
     "displayName": "Trailing Whitespace Highlighter",
     "description": "",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "pajdziu",
     "engines": {
         "vscode": "^1.5.0"

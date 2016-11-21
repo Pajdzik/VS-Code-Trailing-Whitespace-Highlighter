@@ -36,7 +36,7 @@ export namespace WhitespaceHighlighter {
                 let startPos = this.activeEditor.document.positionAt(match.index);
                 let endPos = this.activeEditor.document.positionAt(match.index + match[0].length);
 
-                let decoration = { range: new vscode.Range(startPos, endPos), hoverMessage: 'Number **' + match[0] + '**' };
+                let decoration = { range: new vscode.Range(startPos, endPos), hoverMessage: "Trailing whitespace" };
                 whiteSpaceDecoration.push(decoration);
             }
 
